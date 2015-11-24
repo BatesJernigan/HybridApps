@@ -57,8 +57,7 @@ function saveContact() {
     var contactUrl = new ContactField('website', document.getElementById('contactUrl').value, true);
 
     var contactBirthdate = new Date(document.getElementById('contactBirthdate').value);
-    
-    // alert('js birthdate ' + contactBirthdate  + '\nvalue birthday ' + document.getElementById('contactBirthdate').value);
+
     var contact = navigator.contacts.create();
 
     contact.displayName = contactName;
@@ -72,7 +71,7 @@ function saveContact() {
 }
 
 function onSuccess(contact) {
-    alert("Save Success\n" + contact.birthday);
+    alert('Save Success');
 };
 
 function onError(contactError) {
